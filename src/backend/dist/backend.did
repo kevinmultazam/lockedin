@@ -1,0 +1,39 @@
+type UserProfile = 
+ record {
+   joinedAt: int;
+   username: text;
+ };
+type DayProgress = vec bool;
+type Day = nat;
+type CommunityUserStats = 
+ record {
+   currentDay: nat;
+   currentStreak: nat;
+   overallCompletion: float64;
+   todayCompletion: float64;
+   totalPoints: nat;
+   username: text;
+ };
+type AllProgress = 
+ vec record {
+       Day;
+       DayProgress;
+     };
+service : {
+  getAllProgress: () -> (AllProgress) query;
+  getCommunityStats: () -> (vec CommunityUserStats) query;
+  getCurrentDay: () -> (nat) query;
+  getDailyRandomChallenge: () -> (vec text) query;
+  getDayProgress: (day: nat) -> (opt vec bool) query;
+  getMyAnalytics: () -> (AllProgress) query;
+  getProfile: () -> (opt UserProfile) query;
+  getStreak: () -> (nat) query;
+  getTotalPoints: () -> (nat) query;
+  nextDay: () -> ();
+  resetProgress: () -> ();
+  setChallenge: (day: nat, challengeIndex: nat, completed: bool) -> ();
+  setUsername: (username: text) -> (variant {
+                                      err: text;
+                                      ok;
+                                    });
+}

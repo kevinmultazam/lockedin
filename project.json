@@ -1,0 +1,27 @@
+{
+  "overview": "Lockedin is a 30-day challenge tracker for self-discipline and habit building. Features daily checklists, streak counters, points, achievements, community leaderboard, and Instagram-ready share cards.",
+  "features": [
+    "Daily challenge checklist with 10 habits",
+    "30-day progress tracker",
+    "Streak counter for consecutive perfect days",
+    "Points system (10 pts per challenge)",
+    "Achievements at 500/1000/1500/2000 pts",
+    "Community leaderboard ranked by points",
+    "Strava-style share card with Instagram sharing",
+    "Real-time analytics with auto-refresh",
+    "Internet Identity authentication",
+    "Immutable username setup"
+  ],
+  "category": "productivity",
+  "tags": [
+    "habit-tracker",
+    "challenge",
+    "gamification",
+    "productivity",
+    "leaderboard",
+    "achievements",
+    "streak",
+    "instagram-share"
+  ],
+  "last_updated": "2026-04-16T10:09:43.940Z"
+}
